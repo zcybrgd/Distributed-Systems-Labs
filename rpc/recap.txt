@@ -1,0 +1,10 @@
+RPC permet d’appeler une fonction sur une machine distante comme si elle était locale.
+📌 Fonctionnement
+
+    Le client appelle une fonction locale.
+
+    L’appel est transformé en une requête réseau.
+
+    Le serveur exécute la fonction.
+
+    Le résultat est renvoyé au client.

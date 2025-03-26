@@ -1,0 +1,31 @@
+Les sockets permettent la communication entre processus sur un réseau (c l un des 3 modeles de communication qu'on va etudier)
+Une socket est une combinaison de : une adresse IP (exemple : 192.168.1.1), un port (exemple : 8080 pour HTTP)
+
+Exemple d’une socket TCP : 192.168.1.10:5000
+
+Cela signifie processus actif sur l’IP 192.168.1.10 et port 5000.
+
+📌 Fonctionnement d’une Communication avec Sockets
+Côté Serveur
+
+    Création d’une socket serveur (socket()).
+
+    Liaison de la socket (bind()).
+
+    Mise en écoute (listen()).
+
+    Acceptation des connexions (accept()).
+
+    Communication (send(), recv()).
+
+    Fermeture (close()).
+
+Côté Client
+
+    Création d’une socket (socket()).
+
+    Connexion au serveur (connect()).
+
+    Communication (send(), recv()).
+
+    Fermeture (close()).

@@ -1,0 +1,8 @@
+RMI est comme RPC mais orienté objets : on peut appeler des méthodes sur des objets distants.
+📌 Architecture RMI
+
+    Stub (côté client) : interface pour appeler une méthode distante.
+
+    Skeleton (côté serveur) : reçoit l’appel et exécute la méthode.
+
+    RMI Registry : gère les objets distants.
