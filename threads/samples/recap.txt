@@ -22,3 +22,7 @@ compatible avec plusieurs OS
 Linux parle plutôt de tâches (tasks)
 -La création de threads se fait à l’aide de l’appel système clone()
 -clone() permet à une tâche fils de partager l’espace d’adressage de la tâche parent (processus)
+
+## Threads JAVA
+Les threads Java sont gérés par la JVM
+• Les threads Java peuvent être créés par: extension de la classe Thread ou implémentation de l’interface Runnable
