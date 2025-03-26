@@ -1,0 +1,24 @@
+- 2 approches d implementation : les threads noyau(des appels systeme) et les threads utilisateur(des appels a des bib)
+- Sun Solaris a implemente un noyau multithreads avec la capacite de gerer des threads utilisateurs
+
+## Threads Windows
+- ils implementent le modele un a un, chaque thread comporte un id, un ensemble de registres, des piles user et noyau separes, espace de stockage separe: le contexte d'un thread
+- les structures de donnees sont: ETHREAD, KTHREAD, TEB
+- L’API Win32 offre plusieurs appels système pour gérer les threads niveau utilisateur:
+• CreateThread() : créer un thread
+• SetThreadPriority() : définit la priorité d’un thread
+• SuspendThread() : suspend un thread et incrémente le compteur d’attente du thread courant
+• ResumeThread() : décrémente le compteur d’attente du thread courant et le réactive
+• Sleep() : suspend l’exécution du thread courant pour une durée déterminée
+• ExitThread() : termine le thread courant
+
+## Threads POSIX
+posix est une API pour la creation et la synchronisation des threads (user)
+l'API specifie le comportement d une bib de threads, l implementation etant laissee aux developpeurs
+compatible avec plusieurs OS
+
+## Threads LINUX
+
+Linux parle plutôt de tâches (tasks)
+-La création de threads se fait à l’aide de l’appel système clone()
+-clone() permet à une tâche fils de partager l’espace d’adressage de la tâche parent (processus)
