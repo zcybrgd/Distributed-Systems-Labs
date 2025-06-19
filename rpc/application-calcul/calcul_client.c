@@ -34,6 +34,8 @@ int main(int argc, char *argv[]) {
         exit(1);
     }
     //on établit une connex RPC avec CALCUL, VERSION_UN → viennent du fichier .x et on choisit UDP, mais ça peut être "tcp" aussi
+    //CALCUL est l’identifiant global du service (numéro : 0x20000001)
+    //VERSION_UN est la version 1 du service
     //elle crée le stub client
     clnt = clnt_create(argv[1], CALCUL, VERSION_UN, "udp");
     if (clnt == NULL) {
