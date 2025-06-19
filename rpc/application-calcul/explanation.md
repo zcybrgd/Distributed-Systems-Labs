@@ -1,9 +1,9 @@
 # RPC Calculator + Détection d’Overflow (SunRPC, UDP)
 
 Ce projet implémente une **application RPC simple** en C avec **SunRPC** dans le cadre d'un TP initial pour nous introduire au RPC dans le module SYSD
-Le client appelle une fonction distante `CALCUL_ADDITION()` qui additionne deux entiers non signés (`unsigned int`) et renvoie :
-* leur **somme**
-* un **code d'erreur** si l'addition provoque un overflow.
+Le client appelle une fonction distante `CALCUL()` qui fait des calculs entre 2 entiers non signés (`unsigned int`) et renvoie :
+* le résultat
+* un **code d'erreur** si le calculc provoque un overflow.
 
 > Le transport réseau utilisé est **UDP** (par défaut). Mais on peut l'adapter en **TCP** en changeant un seul argument trouvé dans create_client
 
@@ -19,7 +19,7 @@ calcul_rpc/
 ├── calcul_clnt.c      # Stub client (auto-généré avec rpcgen -a calcul.x)
 ├── calcul_svc.c       # Stub serveur (idem)
 ├── calcul_xdr.c       # Fonctions de sérialisation XDR
-├── calcul.h           # Header généré
+├── calcul.h           # Header généré par le .x aussi 
 └── Makefile           # Compilation automatisée
 ```
 
